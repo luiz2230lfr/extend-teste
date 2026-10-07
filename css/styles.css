@@ -237,6 +237,7 @@ section[tabindex="-1"]:focus { outline: none; }
   content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
   background: linear-gradient(90deg, var(--logo-a), var(--logo-b));
 }
+.client-logo { display: block; height: 40px; width: auto; max-width: 140px; object-fit: contain; margin: 0.25rem auto 0.9rem; }
 .client-card h3 { margin: 0 0 0.35rem; font-size: 1.125rem; overflow-wrap: anywhere; }
 .client-card p { font-size: 0.9375rem; }
 @media (min-width: 768px) { .clients-grid { grid-template-columns: repeat(2, 1fr); } }
