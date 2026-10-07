@@ -26,7 +26,7 @@ var ATRIBUICAO_DIAS = 90;
  * Título dinâmico (message match com o anúncio).
  * Só valores desta lista fixa são aceitos. Qualquer outro valor cai no título padrão.
  */
-var H1_PADRAO = "Mais clientes chamando no WhatsApp da sua empresa. Todo mês.";
+var H1_PADRAO = "Mais clientes chamando no WhatsApp da sua empresa.";
 
 var H1_POR_KW = {
   "agencia-marketing": "Agência de marketing que coloca mais clientes chamando no WhatsApp da sua empresa.",
@@ -36,7 +36,7 @@ var H1_POR_KW = {
 var H1_REMARKETING = "Você já viu como a Extend trabalha. Agora é a vez do seu negócio.";
 
 /* {cidade} é trocado pelo nome da cidade da lista abaixo. */
-var H1_CIDADE = "Mais clientes chamando no WhatsApp da sua empresa em {cidade}. Todo mês.";
+var H1_CIDADE = "Mais clientes chamando no WhatsApp da sua empresa em {cidade}.";
 
 var CIDADES = {
   "sombrio": "Sombrio",
@@ -55,4 +55,4 @@ var CIDADES = {
 };
 
 /* Trecho do H1 que ganha a cor de destaque (o primeiro que aparecer no título). */
-var H1_DESTAQUES = ["Todo mês.", "chamando no WhatsApp", "o seu WhatsApp", "a vez do seu negócio"];
+var H1_DESTAQUES = ["chamando no WhatsApp", "o seu WhatsApp", "a vez do seu negócio"];

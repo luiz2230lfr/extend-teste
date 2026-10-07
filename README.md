@@ -64,7 +64,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
   - ciano `#8CDCFF` (selos e destaques sobre azul)
   - degradê do logo de `#1063C6` a `#31A0DD`
 - **Tipografia** como nos posts: títulos (H1 e H2) em caixa alta e peso 800, selos com espaçamento largo entre letras e corpo em peso normal.
-- **Caixa de destaque** (`.hl-box`): texto branco sobre azul claro, como "CLAREZA E CONFIANÇA" nos posts. Usada em "TODO MÊS." no hero e na segunda frase do manifesto. Como o contraste é de 3,6:1, só pode ir em texto grande (24px ou mais).
+- **Caixa de destaque** (`.hl-box`): texto branco sobre azul claro, como "CLAREZA E CONFIANÇA" nos posts. Usada na segunda frase do manifesto. Como o contraste é de 3,6:1, só pode ir em texto grande (24px ou mais).
 - **Logo:** no hero o logo aparece em branco. Com o cabeçalho claro, aparece colorido, com o degradê original. No celular, até 479px, mostra só o símbolo. No rodapé fica o logo completo em branco, e o símbolo aparece em marca d'água a 5% no manifesto.
 - **Mudança de regra:** a regra anterior do briefing era títulos em caixa normal. Mudei para caixa alta a pedido do Luiz, para ficar igual aos posts.
 
@@ -96,7 +96,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
 
 ## Decisões tomadas
 
-1. **Título por campanha:** prioridade `utm_content=remarketing` > `kw` > `cidade`, só valores da lista fixa, escritos com `textContent` antes da primeira pintura. O destaque em azul claro vai em "Todo mês." (em linha própria) quando existe na frase.
+1. **Título por campanha:** prioridade `utm_content=remarketing` > `kw` > `cidade`, só valores da lista fixa, escritos com `textContent` antes da primeira pintura. O destaque em azul claro vai em "chamando no WhatsApp" (ou no trecho equivalente de cada variação, ver `H1_DESTAQUES` em `config.js`).
 2. **Origem sem `utm_source`:** `gclid`/`gbraid`/`wbraid` vale `#g`; `fbclid` vale `#m`; sem nada, `#o`.
 3. **Hero enxuto:** saíram os três sinais de confiança, o segundo botão e o parágrafo longo. Os fatos de confiança ficam numa seção própria, depois dos clientes. O bloco de vídeo saiu do hero a pedido do Luiz: o hero termina na microcopy abaixo do botão.
 4. **Prova social:** a seção de clientes (`#clientes`) está pronta com placeholders. A seção de confiança usa só fatos verificáveis do briefing. A seção de cases está pronta e escondida.
@@ -104,7 +104,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
 6. **CTA fixo no celular:** um botão só, "Falar com a Extend", que aparece depois do hero e some quando o formulário está na tela.
 7. **Barra de vagas:** virou um selo discreto acima do título do formulário. Revisar todo mês; se não houver limite real, apagar o bloco `.vagas`.
 8. **Layout centralizado** em todas as seções (pedido do Luiz). Dentro dos cards de qualificação e do formulário, as listas e os campos ficam alinhados à esquerda para leitura.
-9. **Mobile:** o título do hero ocupa 4 linhas + "TODO MÊS." em linha própria. A frase do manifesto chega a 6 linhas no celular (com a caixa de destaque, de propósito, como nos posts). Em 320px o título do problema também chega a 6.
+9. **Mobile:** o título do hero ocupa 4 linhas no celular e 2 no desktop. A frase do manifesto chega a 6 linhas no celular (com a caixa de destaque, de propósito, como nos posts). Em 320px o título do problema também chega a 6.
 11. **A página sempre abre no topo:** os links internos (botões para `#contato`, seta do hero, menu) rolam suave sem gravar `#secao` no endereço, e ao abrir a página qualquer `#` é removido e a rolagem anterior não é restaurada. Antes, quem reabria a página com `/#contato` no endereço caía direto no formulário. Os parâmetros de campanha (`?kw=`, `?cidade=`, `utm_*`) são mantidos.
 10. **Aviso de cookies no celular:** só aparece depois que o hero sai da tela e some enquanto o formulário está visível, para nunca cobrir o botão principal nem o formulário (em telas de 320x640 ele cobria). Nenhuma tag carrega antes do aceite, então isso não muda nada na LGPD. No desktop continua no canto inferior esquerdo.
 
@@ -145,3 +145,14 @@ A pasta é autossuficiente: HTML, CSS e JS puros, sem build, sem dependências, 
 - Prova social e cases, quando houver material autorizado.
 - Ícones: SVGs de linha provisórios (traço 2px em `#0348C9`), podem ser trocados por um set da marca.
 - Antes de publicar: dados legais, Política de Privacidade e Termos revisados, IDs de rastreamento, testes no iPhone (Safari e navegador interno do Instagram), Android (Chrome) e WhatsApp Web.
+
+## Otimização de conversão (rodada aprovada pelo Luiz)
+
+Ajustes cirúrgicos de copy e CTA, sem mudar oferta, layout, formulário ou identidade:
+
+- **Hero:** saiu "TODO MÊS" (soava como promessa de resultado). Título: "Mais clientes chamando no WhatsApp da sua empresa." Subtítulo: "Estratégia, anúncios e estrutura comercial para transformar seu investimento em tráfego em oportunidades reais de venda." CTA "Quero atrair mais clientes →" e microfrase "Fale com a Extend e descubra como podemos estruturar sua aquisição de clientes." A variação por cidade também perdeu o "Todo mês".
+- **Hierarquia de CTAs:** primeira dobra "Quero atrair mais clientes"; todos os outros botões (processo, time, formulário, CTA final e cases) "Quero falar com a Extend". O cabeçalho e a barra fixa do celular seguem "Falar com a Extend".
+- **Títulos trocados:** clientes ("...que já confiam na Extend"), problema ("Mas quem transforma esse contato em cliente?" + novo texto de apoio), processo ("Do anúncio à venda: um processo pensado para converter"), WhatsApp ("Seu WhatsApp precisa transformar conversas em oportunidades" + novo texto de apoio), diferencial ("Uma agência que pensa no seu negócio, não só nos seus anúncios"), formulário ("Vamos entender como a Extend pode ajudar sua empresa" + "Responda algumas perguntas rápidas e fale diretamente com nossa equipe pelo WhatsApp") e FAQ ("As principais dúvidas antes de começar").
+- **Preservados sem alteração:** "Anúncio bom traz contato. Processo bom transforma contato em cliente.", "Feito para quem quer crescer com processo, não com sorte.", "Seu anúncio já pode trazer o contato. Agora falta o processo.", as perguntas do FAQ, os campos do formulário e a mensagem enviada ao WhatsApp.
+- **Processo:** mudou só o título. As 5 etapas existentes (Atraímos, Capturamos, Qualificamos, Convertemos, Otimizamos) foram mantidas, sem inventar etapas novas.
+- **"Já confiam na Extend":** só é verdade quando os placeholders `[Empresa]` forem trocados por clientes reais e autorizados.

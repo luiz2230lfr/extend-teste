@@ -217,7 +217,9 @@ section[tabindex="-1"]:focus { outline: none; }
 }
 .scroll-cue .ico { width: 24px; height: 24px; }
 .scroll-cue:hover { color: var(--white); transform: translateX(-50%) translateY(2px); }
-.hero-text { max-width: 1000px; margin: 0 auto; }
+.hero-text { max-width: 1160px; margin: 0 auto; }
+.hero-text .hero-sub, .hero-text .microcopy { margin-left: auto; margin-right: auto; }
+.hero .microcopy { max-width: 34em; }
 .hero h1 { margin-bottom: 1.1rem; }
 .hero h1 .hl-break { display: table; margin: 0.12em auto 0; }
 .hero h1.h1-longo { font-size: clamp(1.75rem, 1.1rem + 3vw, 3.5rem); }
@@ -613,6 +615,9 @@ body.cookie-open .mobile-bar.is-visible { transform: translateY(110%); visibilit
 @media (max-width: 359px) {
   :root { --gutter: 16px; }
   .logo img { height: 30px; }
+  /* "Quero atrair mais clientes" cabe em uma linha mesmo em telas de 320px */
+  .hero .btn { padding-left: 16px; padding-right: 16px; font-size: 0.9375rem; }
+  .hero .btn .arrow { display: none; }
   .btn-header { padding: 8px 12px; font-size: 0.875rem; }
 }
 

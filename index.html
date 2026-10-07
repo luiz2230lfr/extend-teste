@@ -118,7 +118,7 @@
     <div class="container">
       <div class="hero-text">
         <p class="eyebrow hero-in" style="--d:0ms">AGÊNCIA EXTEND · SUL DE SC</p>
-        <h1 id="titulo-principal" class="hero-in" style="--d:60ms">Mais clientes chamando no WhatsApp da sua empresa. <span class="hl hl-box hl-break">Todo mês.</span></h1>
+        <h1 id="titulo-principal" class="hero-in" style="--d:60ms">Mais clientes <span class="hl">chamando no WhatsApp</span> da sua empresa.</h1>
         <script>
           /* Título por campanha, antes da primeira pintura. Só aceita valores da lista fixa (config.js) e escreve com textContent. */
           (function () {
@@ -141,7 +141,7 @@
               if (!trecho) { h1.textContent = titulo; return; }
               var pos = titulo.indexOf(trecho);
               var span = document.createElement('span');
-              span.className = trecho === 'Todo mês.' ? 'hl hl-box hl-break' : 'hl';
+              span.className = 'hl';
               span.textContent = trecho;
               h1.appendChild(document.createTextNode(titulo.slice(0, pos)));
               h1.appendChild(span);
@@ -150,10 +150,10 @@
             } catch (e) { /* sem suporte: fica o título padrão */ }
           })();
         </script>
-        <p class="hero-sub hero-in" style="--d:140ms">A Extend conecta anúncio, atendimento e processo comercial para o contato virar venda.</p>
+        <p class="hero-sub hero-in" style="--d:140ms">Estratégia, anúncios e estrutura comercial para transformar seu investimento em tráfego em oportunidades reais de venda.</p>
         <div class="hero-in" style="--d:220ms">
-          <a class="btn btn-on-dark" href="#contato">Quero mais clientes <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <p class="microcopy">Leva menos de 1 minuto. Sem compromisso.</p>
+          <a class="btn btn-on-dark" href="#contato">Quero atrair mais clientes <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <p class="microcopy">Fale com a Extend e descubra como podemos estruturar sua aquisição de clientes.</p>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">QUEM JÁ CONFIA NA EXTEND</p>
-        <h2 id="titulo-clientes">Empresas do <span class="hl nowrap">sul de SC</span> que já trabalham com a Extend</h2>
+        <h2 id="titulo-clientes">Empresas do <span class="hl nowrap">sul de SC</span> que já confiam na Extend</h2>
       </header>
       <ul class="clients-grid" data-stagger aria-label="Clientes da Extend">
         <li class="card client-card reveal"><h3>[Empresa]</h3><p>[segmento] · [cidade]</p></li>
@@ -202,8 +202,8 @@
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">O PROBLEMA</p>
-        <h2 id="titulo-problema">Seu anúncio traz o contato. <span class="hl">Mas quem transforma contato em venda?</span></h2>
-        <p class="lead">Gerar mensagem é a parte fácil. A venda se perde no que acontece depois.</p>
+        <h2 id="titulo-problema">Seu anúncio traz o contato. <span class="hl">Mas quem transforma esse contato em cliente?</span></h2>
+        <p class="lead">Gerar leads é apenas o começo. Sua empresa precisa de uma estrutura para transformar oportunidades em vendas.</p>
       </header>
       <ul class="problem-grid" data-stagger>
         <li class="card reveal">
@@ -257,7 +257,7 @@
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">COMO FUNCIONA</p>
-        <h2 id="titulo-processo">Um caminho simples <span class="hl">do anúncio até a venda</span>.</h2>
+        <h2 id="titulo-processo">Do anúncio à venda: <span class="hl">um processo pensado para converter</span>.</h2>
         <p class="lead">Cinco etapas. Você sabe sempre em que ponto está.</p>
       </header>
       <ol class="steps">
@@ -288,7 +288,7 @@
         </li>
       </ol>
       <div class="cta-block">
-        <a class="btn btn-primary" href="#contato">Quero mais clientes <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-primary" href="#contato">Quero falar com a Extend <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
@@ -298,8 +298,8 @@
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">O QUE VOCÊ GANHA</p>
-        <h2 id="titulo-beneficios">Seu WhatsApp precisa de <span class="hl">mais do que mensagens</span>.</h2>
-        <p class="lead">Precisa de gente certa chegando e de um processo para ninguém escapar.</p>
+        <h2 id="titulo-beneficios">Seu WhatsApp precisa transformar <span class="hl">conversas em oportunidades</span>.</h2>
+        <p class="lead">Não basta gerar mensagens. É preciso conduzir o potencial cliente até o próximo passo.</p>
       </header>
       <ul class="benefits" data-stagger>
         <li class="card reveal">
@@ -341,7 +341,7 @@
     <div class="container stack">
       <header class="section-head">
         <p class="eyebrow">QUEM CUIDA DA SUA CONTA</p>
-        <h2 id="titulo-time">Uma agência que trabalha como <span class="hl">parte do seu time</span>.</h2>
+        <h2 id="titulo-time">Uma agência que pensa no seu negócio, <span class="hl">não só nos seus anúncios</span>.</h2>
         <p class="lead">Nada de agência distante que manda relatório e some. Gente daqui, que entende o seu negócio e trabalha junto com quem atende os seus clientes.</p>
       </header>
       <div class="stack-media">
@@ -383,7 +383,7 @@
         </li>
       </ul>
       <div class="cta-block">
-        <a class="btn btn-primary" href="#contato">Quero resultados como esses <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-primary" href="#contato">Quero falar com a Extend <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
@@ -424,8 +424,8 @@
       <header class="section-head">
         <!-- Barra de vagas: revisar todo mês. Se não houver limite real, apagar este bloco. -->
         <p class="vagas"><span class="vagas-dot" aria-hidden="true"></span><span><strong>VAGAS LIMITADAS.</strong> Poucas vagas novas por mês, para acompanhar cada cliente de perto.</span></p>
-        <h2 id="titulo-contato">Vamos entender se a Extend pode <span class="hl">ajudar sua empresa</span>.</h2>
-        <p class="lead">Quatro perguntas rápidas. Seu WhatsApp abre com as respostas já escritas.</p>
+        <h2 id="titulo-contato">Vamos entender como a Extend pode <span class="hl">ajudar sua empresa</span>.</h2>
+        <p class="lead">Responda algumas perguntas rápidas e fale diretamente com nossa equipe pelo WhatsApp.</p>
       </header>
       <div class="form-wrap">
         <div class="form-mount" data-form-mount data-titulo="Fale com a Extend"></div>
@@ -443,7 +443,7 @@
     <div class="container container-narrow">
       <header class="section-head">
         <p class="eyebrow">DÚVIDAS</p>
-        <h2 id="titulo-duvidas">O que todo dono de empresa pergunta <span class="hl">antes de começar</span>.</h2>
+        <h2 id="titulo-duvidas">As principais dúvidas <span class="hl">antes de começar</span>.</h2>
       </header>
       <div class="faq" data-accordion>
         <div class="faq-item">
@@ -492,7 +492,7 @@
       <h2 id="titulo-final">Seu anúncio já pode trazer o contato. <span class="hl">Agora falta o processo.</span></h2>
       <p class="lead" style="margin: 0 auto">Conte sobre o seu negócio. Leva menos de 1 minuto.</p>
       <div class="cta-block">
-        <a class="btn btn-primary" href="#contato">Quero mais clientes <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-primary" href="#contato">Quero falar com a Extend <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="text-link" href="https://wa.me/5548996127742" data-wa="cta-final">Prefiro chamar direto no WhatsApp</a>
       </div>
     </div>
@@ -579,7 +579,7 @@
         </div>
       </fieldset>
       <button class="btn btn-primary btn-block" type="submit">
-        <span class="btn-label">Quero falar com a Extend</span>
+        <span class="btn-label">Quero falar com a Extend</span> <svg class="ico arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
       </button>
       <p class="form-notice">Ao clicar, seu WhatsApp abre com as respostas já escritas. É só tocar em enviar.</p>
     </form>
