@@ -385,6 +385,18 @@
     itens.forEach(function (el) { obs.observe(el); });
   }
 
+  /* ---------- Carrossel de clientes: focável pelo teclado só quando dá para rolar (celular) ---------- */
+  function iniciarCarrossel() {
+    var lista = doc.querySelector('.clients-grid');
+    if (!lista) return;
+    function ajustar() {
+      if (lista.scrollWidth > lista.clientWidth + 1) lista.setAttribute('tabindex', '0');
+      else lista.removeAttribute('tabindex');
+    }
+    ajustar();
+    window.addEventListener('resize', ajustar, { passive: true });
+  }
+
   /* ---------- Rolagem de 50% (opcional) ---------- */
   function iniciarScroll50() {
     var disparado = false;
@@ -407,6 +419,7 @@
   iniciarSanfona();
   iniciarObservadores();
   iniciarReveal();
+  iniciarCarrossel();
   iniciarScroll50();
   iniciarCookies();
 

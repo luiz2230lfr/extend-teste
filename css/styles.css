@@ -211,6 +211,7 @@ button, input, select { font: inherit; }
 /* ---------- Prova social: clientes ---------- */
 .clients-grid { display: grid; gap: 1rem; max-width: 1080px; margin: 0 auto; }
 .client-card { position: relative; overflow: hidden; padding: 1.4rem 1.25rem 1.25rem; }
+.clients-grid:focus-visible { outline-offset: 4px; }
 .nowrap { white-space: nowrap; }
 /* Faixa no topo com o degradê do logo */
 .client-card::before {
@@ -219,7 +220,34 @@ button, input, select { font: inherit; }
 }
 .client-card h3 { margin: 0 0 0.35rem; font-size: 1.125rem; overflow-wrap: anywhere; }
 .client-card p { font-size: 0.9375rem; }
-@media (min-width: 480px) { .clients-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .clients-grid { grid-template-columns: repeat(2, 1fr); } }
+.swipe-hint { display: none; }
+
+/* Celular: carrossel de arrastar para o lado, com encaixe card a card e o próximo aparecendo na borda */
+@media (max-width: 767px) {
+  .clients-section { padding: 3rem 0 2.5rem; }
+  .clients-section .section-head { margin-bottom: 1.5rem; }
+  .clients-grid {
+    display: flex; gap: 12px; max-width: none;
+    overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 16px;
+    scrollbar-width: none;
+  }
+  .clients-grid::-webkit-scrollbar { display: none; }
+  .clients-grid::after { content: ""; flex: 0 0 1px; } /* respiro depois do último card */
+  .client-card { flex: 0 0 78%; scroll-snap-align: start; padding: 1.15rem 1rem 1rem; }
+  .client-card h3 { font-size: 1.0625rem; }
+  /* No carrossel os cards aparecem direto, sem animação de entrada */
+  .js .clients-grid .reveal { opacity: 1; transform: none; }
+  .swipe-hint { display: block; margin: 0.5rem 0 0; text-align: center; }
+  .swipe-hint span {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border-radius: 999px; border: 1px solid #C9CEDB;
+    font-size: 0.8125rem; font-weight: 500; color: var(--grey);
+  }
+  .swipe-hint .ico { width: 16px; height: 16px; color: var(--blue); }
+}
 
 .placeholder {
   position: relative; display: flex; align-items: flex-end; justify-content: flex-start;
