@@ -97,6 +97,9 @@ button, input, select { font: inherit; }
 .site-header:not(.is-scrolled) :focus-visible { outline-color: var(--blue-soft); }
 .on-dark .form-card :focus-visible { outline-color: var(--blue); }
 
+/* Seções que recebem foco ao clicar num link interno não mostram contorno */
+section[tabindex="-1"]:focus { outline: none; }
+
 .skip-link {
   position: absolute; left: 12px; top: -100px; z-index: 100;
   background: var(--white); color: var(--blue); font-weight: 700;

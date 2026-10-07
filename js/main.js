@@ -385,6 +385,24 @@
     itens.forEach(function (el) { obs.observe(el); });
   }
 
+  /* ---------- Links internos: rolagem suave sem gravar "#secao" no endereço ----------
+     Sem isso, ao reabrir a página com "#contato" no endereço o navegador pula direto para o formulário. */
+  function iniciarLinksInternos() {
+    doc.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (!link || link.classList.contains('skip-link') || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      var id = link.getAttribute('href');
+      if (id.length < 2) return;
+      var alvo = doc.querySelector(id);
+      if (!alvo) return;
+      e.preventDefault();
+      alvo.scrollIntoView({ behavior: reduzMovimento ? 'auto' : 'smooth', block: 'start' });
+      /* Leva o foco junto (teclado e leitor de tela), sem rolar de novo */
+      if (!alvo.hasAttribute('tabindex')) alvo.setAttribute('tabindex', '-1');
+      alvo.focus({ preventScroll: true });
+    });
+  }
+
   /* ---------- Carrossel de clientes: focável pelo teclado só quando dá para rolar (celular) ---------- */
   function iniciarCarrossel() {
     var lista = doc.querySelector('.clients-grid');
@@ -420,6 +438,7 @@
   iniciarObservadores();
   iniciarReveal();
   iniciarCarrossel();
+  iniciarLinksInternos();
   iniciarScroll50();
   iniciarCookies();
 

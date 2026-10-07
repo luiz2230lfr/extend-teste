@@ -105,6 +105,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
 7. **Barra de vagas:** virou um selo discreto acima do título do formulário. Revisar todo mês; se não houver limite real, apagar o bloco `.vagas`.
 8. **Layout centralizado** em todas as seções (pedido do Luiz). Dentro dos cards de qualificação e do formulário, as listas e os campos ficam alinhados à esquerda para leitura.
 9. **Mobile:** o título do hero ocupa 4 linhas + "TODO MÊS." em linha própria. A frase do manifesto chega a 6 linhas no celular (com a caixa de destaque, de propósito, como nos posts). Em 320px o título do problema também chega a 6.
+11. **A página sempre abre no topo:** os links internos (botões para `#contato`, seta do hero, menu) rolam suave sem gravar `#secao` no endereço, e ao abrir a página qualquer `#` é removido e a rolagem anterior não é restaurada. Antes, quem reabria a página com `/#contato` no endereço caía direto no formulário. Os parâmetros de campanha (`?kw=`, `?cidade=`, `utm_*`) são mantidos.
 10. **Aviso de cookies no celular:** só aparece depois que o hero sai da tela e some enquanto o formulário está visível, para nunca cobrir o botão principal nem o formulário (em telas de 320x640 ele cobria). Nenhuma tag carrega antes do aceite, então isso não muda nada na LGPD. No desktop continua no canto inferior esquerdo.
 
 ## Verificação feita

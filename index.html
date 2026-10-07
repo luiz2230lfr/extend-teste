@@ -18,7 +18,20 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    /* A página sempre abre no topo: o navegador não restaura a rolagem anterior
+       e um "#contato" que tenha ficado no endereço é removido (mantendo os parâmetros de campanha). */
+    (function () {
+      try {
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        if (location.hash) {
+          history.replaceState(null, '', location.pathname + location.search);
+          window.addEventListener('load', function () { window.scrollTo(0, 0); });
+        }
+      } catch (e) { /* sem suporte: comportamento padrão do navegador */ }
+    })();
+  </script>
   <script src="js/config.js"></script>
 
   <script type="application/ld+json">
