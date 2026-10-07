@@ -24,7 +24,7 @@ assets/            logos oficiais (colorido e branco, completo e só símbolo)
 
 | # | Seção | Pergunta que responde |
 |---|---|---|
-| 1 | Hero | O que é e o que eu faço agora? (título, subtítulo, um CTA) |
+| 1 | Hero | O que é e o que eu faço agora? (título, subtítulo, um CTA). Ocupa a tela inteira (`100svh`), com o conteúdo centralizado e uma seta discreta no pé; a próxima seção só aparece ao rolar. Em telas muito baixas, cresce o necessário para não cortar o texto. |
 | 1b | Clientes | Quem já trabalha com a Extend? (cards com empresa, segmento e cidade; no celular viram um carrossel de arrastar para o lado, com o selo "Arraste para o lado"; 2 colunas no tablet e 4 no desktop) |
 | 2 | Confiança | Dá para confiar? (fatos verificáveis: equipe própria, região, números semanais, contrato) |
 | 3 | Problema | Por que meu anúncio não vira venda? |

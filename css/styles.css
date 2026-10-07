@@ -199,7 +199,21 @@ button, input, select { font: inherit; }
 .site-header.is-scrolled .btn-header:hover { background: var(--blue-hover); }
 
 /* ---------- Hero ---------- */
-.hero { padding: calc(var(--header-h) + 3rem) 0 3.5rem; text-align: center; overflow: hidden; }
+/* O hero ocupa a tela inteira; a próxima seção só aparece ao rolar.
+   svh = altura da tela no celular já descontando a barra do navegador (evita "pular" no iPhone). */
+.hero {
+  position: relative; display: flex; align-items: center;
+  min-height: 100vh; min-height: 100svh;
+  padding: calc(var(--header-h) + 2rem) 0 4.5rem; text-align: center; overflow: hidden;
+}
+.hero > .container { width: 100%; }
+.scroll-cue {
+  position: absolute; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+  width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%;
+  color: rgba(255, 255, 255, 0.75); transition: color var(--t-micro) var(--ease), transform var(--t-micro) var(--ease);
+}
+.scroll-cue .ico { width: 24px; height: 24px; }
+.scroll-cue:hover { color: var(--white); transform: translateX(-50%) translateY(2px); }
 .hero-text { max-width: 1000px; margin: 0 auto; }
 .hero h1 { margin-bottom: 1.1rem; }
 .hero h1 .hl-break { display: table; margin: 0.12em auto 0; }
@@ -648,7 +662,7 @@ body.cookie-open .mobile-bar.is-visible { transform: translateY(110%); visibilit
   .site-header.is-scrolled .logo img { height: 36px; }
 
   .btn { min-height: 56px; }
-  .hero { padding: calc(var(--header-h) + 5rem) 0 5rem; }
+  .hero { padding: calc(var(--header-h) + 3rem) 0 5rem; }
   .clients-grid { grid-template-columns: repeat(4, 1fr); }
 
   .facts { grid-template-columns: repeat(4, 1fr); }
