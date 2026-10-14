@@ -46,7 +46,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
 |---|---|---|
 | Logo | cabeçalho e rodapé | **Já é o oficial** (`assets/logo-extend*.png` e `assets/logo-icone*.png`, gerados a partir de `referencias/`). Se existir versão em SVG, trocar os PNGs por ela. |
 | Fonte | todo o site | Montserrat via Google Fonts, a alternativa gratuita mais próxima da fonte dos posts (que parece ser Gilroy, paga). Se a Extend tiver a licença da fonte oficial, trocar `--font` em `css/styles.css` e hospedar os arquivos no próprio site. |
-| Clientes | `#clientes`, logo abaixo do hero | 4 cards de **exemplo provisório** ("Empresa Exemplo 1" a "4", com segmento, cidade e a logo da Extend no lugar da logo do cliente), só para visualizar o layout. Trocar nome, segmento, cidade e logo (`assets/clientes/`, com `alt` = nome da empresa) pelos clientes reais. Trocar só com autorização por escrito de cada cliente (exigência do briefing). Para mais ou menos clientes, duplicar ou apagar um `<li>`. |
+| Clientes | `#clientes`, logo abaixo do hero | **8 clientes reais** com logo (Noelma Carvalho, Gaivota Imóveis, Luminous Store, HG Brasil Incorporações, Mazzovit, Litoral Imóveis, Displicent, GWP Empreendimentos), em ordem intercalada para não concentrar imobiliárias. Logos recortadas e otimizadas em `assets/clientes/` (originais fora do projeto). Falta: **segmento e cidade** de cada um e a **autorização por escrito** de cada cliente. |
 | Foto da equipe | Time | Bloco rotulado. Só foto real, sem banco de imagens e sem IA. WebP/AVIF, `loading="lazy"`. |
 | Cases | `#cases` | Seção pronta (Cliente, Desafio, Estratégia, Resultado) e escondida. Ativar só com dados reais. |
 | Dados legais | rodapé | "[razão social, CNPJ e endereço a preencher]". |
