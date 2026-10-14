@@ -47,7 +47,7 @@ Todos os botões levam ao mesmo formulário (`#contato`). O WhatsApp direto fica
 | Logo | cabeçalho e rodapé | **Já é o oficial** (`assets/logo-extend*.png` e `assets/logo-icone*.png`, gerados a partir de `referencias/`). Se existir versão em SVG, trocar os PNGs por ela. |
 | Fonte | todo o site | Montserrat via Google Fonts, a alternativa gratuita mais próxima da fonte dos posts (que parece ser Gilroy, paga). Se a Extend tiver a licença da fonte oficial, trocar `--font` em `css/styles.css` e hospedar os arquivos no próprio site. |
 | Clientes | `#clientes`, logo abaixo do hero | **8 clientes reais**, na ordem definida pelo Luiz: Luminous Store (Araranguá), Displicent (Sombrio), GWP Empreendimentos (Balneário Gaivota), HG Brasil Incorporações (Turvo), Noelma Carvalho (Araranguá), Gaivota Imóveis (Balneário Gaivota), Mazzovit (Balneário Gaivota), Litoral Imóveis (Balneário Gaivota). Card: logo em cima, nome e cidade (com ícone de local) no rodapé. Logos em `assets/clientes/` (originais fora do projeto). Segmento não aparece porque não foi informado. Falta a **autorização por escrito** de cada cliente. |
-| Foto da equipe | Time | Bloco rotulado. Só foto real, sem banco de imagens e sem IA. WebP/AVIF, `loading="lazy"`. |
+| Arte da equipe | Seção "Quem cuida da sua empresa" (`#time`) | A arte institucional "NOSSO TIME" (fotos reais, nomes e cargos) **ainda não está na pasta**. O espaço segue com placeholder. Quando chegar: colocar em `assets/equipe/`, usar sem cortar pessoas, nomes ou cargos, com dimensões declaradas, `loading="lazy"` e `alt` descritivo. No celular, avaliar recortes fiéis se a arte ficar ilegível. |
 | Cases | `#cases` | Seção pronta (Cliente, Desafio, Estratégia, Resultado) e escondida. Ativar só com dados reais. |
 | Dados legais | rodapé | "[razão social, CNPJ e endereço a preencher]". |
 | Privacidade e termos | `privacidade.html`, `termos.html` | Texto de exemplo, marcado como provisório. |
@@ -156,3 +156,19 @@ Ajustes cirúrgicos de copy e CTA, sem mudar oferta, layout, formulário ou iden
 - **Preservados sem alteração:** "Anúncio bom traz contato. Processo bom transforma contato em cliente.", "Feito para quem quer crescer com processo, não com sorte.", "Seu anúncio já pode trazer o contato. Agora falta o processo.", as perguntas do FAQ, os campos do formulário e a mensagem enviada ao WhatsApp.
 - **Processo:** mudou só o título. As 5 etapas existentes (Atraímos, Capturamos, Qualificamos, Convertemos, Otimizamos) foram mantidas, sem inventar etapas novas.
 - **"Já confiam na Extend":** só é verdade quando os placeholders `[Empresa]` forem trocados por clientes reais e autorizados.
+
+## Refinamento estratégico (rodada de 14/10)
+
+Objetivo: mostrar a solução completa (estratégia, conteúdo e anúncios, acompanhamento, apoio comercial) sem perder a promessa do WhatsApp nem o posicionamento regional. Hero, clientes, formulário e rastreamento **não foram alterados**.
+
+- **Problema:** os 4 cards agora cobrem as quatro frentes (ações soltas, conteúdo que não vende, campanha sem acompanhamento, contato que esfria), em vez de só atendimento. Fecho: "A Extend cuida dessas quatro frentes juntas, com o mesmo time."
+- **Mecanismo:** frase do manifesto intacta. O texto de apoio passou a mostrar a integração: "estratégia, conteúdo, anúncios e apoio comercial trabalham juntos, do primeiro anúncio até a venda".
+- **Processo:** mesmas 5 etapas. As descrições não afirmam mais que toda campanha leva obrigatoriamente ao WhatsApp ("canal certo de contato, como o WhatsApp") e incluem planejamento e produção.
+- **Benefícios:** título "Marketing completo, do planejamento ao atendimento". Cards: Estratégia bem definida, Anúncios e conteúdos profissionais, Campanhas acompanhadas, Apoio comercial, Transparência.
+- **Equipe:** copy definitiva aplicada (eyebrow "QUEM CUIDA DA SUA EMPRESA", título, texto e os 3 pontos). Falta só a arte.
+- **Para quem é:** linguagem menos negativa ("Têm, ou podem ter, alguém para responder os contatos com agilidade", "Querem investir em marketing de forma planejada", "Busca resultado imediato, sem tempo para ajustar a estratégia").
+- **FAQ:** respostas de investimento, serviços e equipe comercial alinhadas com a solução completa (inclui redes sociais e conteúdo).
+- **CTA final:** "Sua empresa pode crescer com uma estratégia de marketing mais completa." + "Conte sobre o seu negócio e descubra como a Extend pode ajudar."
+- **SEO:** meta description e Open Graph refletem a oferta completa e a região.
+- **Vagas limitadas:** mantida porque o briefing original afirma que a Extend limita a entrada de novos clientes. Se em algum mês isso não for verdade, remover o bloco `.vagas`.
+- **Rastreamento:** não mexido nesta rodada, por pedido. Observação para a próxima etapa: hoje o evento `lead_form` dispara no clique válido do formulário, antes de abrir o WhatsApp. Ele mede intenção, não lead confirmado (o site não consegue saber se a mensagem foi enviada).
