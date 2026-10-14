@@ -164,8 +164,7 @@
 
   <!--
     Prova social: clientes reais da Extend (logos em assets/clientes/, já recortadas e otimizadas).
-    Ordem intercalada de propósito para não concentrar imobiliárias/incorporadoras em sequência.
-    Falta: segmento e cidade de cada cliente (entram num <p> abaixo do nome).
+    Ordem definida pelo Luiz: Luminous Store, Displicent, GWP e HG Brasil primeiro. Abaixo do nome vai a cidade.
     Cada cliente precisa ter autorizado por escrito aparecer na página (exigência do briefing).
     O nome já está no <h3>, por isso a logo usa alt="" (evita o leitor de tela repetir o nome).
   -->
@@ -176,14 +175,38 @@
         <h2 id="titulo-clientes">Empresas do <span class="hl nowrap">sul de SC</span> que já confiam na Extend</h2>
       </header>
       <ul class="clients-grid" data-stagger aria-label="Clientes da Extend">
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/noelma-carvalho.png" alt="" width="480" height="136" loading="lazy"><h3>Noelma Carvalho</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/gaivota-imoveis.png" alt="" width="239" height="240" loading="lazy"><h3>Gaivota Imóveis</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/luminous-store.png" alt="" width="480" height="154" loading="lazy"><h3>Luminous Store</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/hg-brasil.png" alt="" width="325" height="240" loading="lazy"><h3>HG Brasil Incorporações</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/mazzovit.png" alt="" width="242" height="240" loading="lazy"><h3>Mazzovit</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/litoral-imoveis.png" alt="" width="240" height="240" loading="lazy"><h3>Litoral Imóveis</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/displicent.png" alt="" width="376" height="240" loading="lazy"><h3>Displicent</h3></li>
-        <li class="card client-card reveal"><img class="client-logo" src="assets/clientes/gwp-empreendimentos.png" alt="" width="443" height="240" loading="lazy"><h3>GWP Empreendimentos</h3></li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/luminous-store.png" alt="" width="480" height="154" loading="lazy"></div>
+          <div class="client-info"><h3>Luminous Store</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Araranguá</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/displicent.png" alt="" width="376" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>Displicent</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Sombrio</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/gwp-empreendimentos.png" alt="" width="443" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>GWP Empreendimentos</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Balneário Gaivota</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/hg-brasil.png" alt="" width="325" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>HG Brasil Incorporações</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Turvo</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/noelma-carvalho.png" alt="" width="480" height="136" loading="lazy"></div>
+          <div class="client-info"><h3>Noelma Carvalho</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Araranguá</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/gaivota-imoveis.png" alt="" width="239" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>Gaivota Imóveis</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Balneário Gaivota</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/mazzovit.png" alt="" width="242" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>Mazzovit</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Balneário Gaivota</p></div>
+        </li>
+        <li class="card client-card reveal">
+          <div class="client-logo-wrap"><img class="client-logo" src="assets/clientes/litoral-imoveis.png" alt="" width="240" height="240" loading="lazy"></div>
+          <div class="client-info"><h3>Litoral Imóveis</h3><p class="client-city"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Balneário Gaivota</p></div>
+        </li>
       </ul>
       <!-- Só aparece no celular, onde os cards viram um carrossel de arrastar -->
       <p class="swipe-hint" aria-hidden="true"><span>Arraste para o lado <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span></p>

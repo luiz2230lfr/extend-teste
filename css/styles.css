@@ -229,19 +229,22 @@ section[tabindex="-1"]:focus { outline: none; }
 
 /* ---------- Prova social: clientes ---------- */
 .clients-grid { display: grid; gap: 1rem; max-width: 1080px; margin: 0 auto; }
-.client-card { position: relative; overflow: hidden; padding: 1.4rem 1.25rem 1.25rem; }
 .clients-grid:focus-visible { outline-offset: 4px; }
 .nowrap { white-space: nowrap; }
+/* Card: área da logo em cima (ocupa o espaço que sobrar) e rodapé com nome e cidade alinhado na base */
+.card.client-card { position: relative; overflow: hidden; display: flex; flex-direction: column; padding: 0; }
 /* Faixa no topo com o degradê do logo */
 .client-card::before {
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
   background: linear-gradient(90deg, var(--logo-a), var(--logo-b));
 }
+.client-logo-wrap { flex: 1; display: grid; place-items: center; padding: 1.75rem 1.25rem 1.25rem; }
 /* Área fixa para a logo: todas ocupam o mesmo espaço, sejam redondas ou horizontais */
-.client-logo { display: block; width: 100%; max-width: 180px; height: 84px; object-fit: contain; margin: 0.25rem auto 1rem; }
-.client-card { display: flex; flex-direction: column; justify-content: center; }
-.client-card h3 { margin: 0 0 0.35rem; font-size: 1.125rem; overflow-wrap: anywhere; }
-.client-card p { font-size: 0.9375rem; }
+.client-logo { display: block; width: 100%; max-width: 170px; height: 80px; object-fit: contain; margin: 0; }
+.client-info { border-top: 1px solid var(--line); padding: 0.9rem 1rem 1rem; }
+.client-card .client-info h3 { margin: 0 0 0.2rem; font-size: 0.9375rem; font-weight: 700; line-height: 1.3; letter-spacing: 0; color: var(--ink); }
+.client-card .client-city { display: inline-flex; align-items: center; gap: 5px; margin: 0; font-size: 0.8125rem; line-height: 1.4; color: var(--grey); }
+.client-city .ico { width: 14px; height: 14px; color: var(--blue); }
 @media (min-width: 768px) { .clients-grid { grid-template-columns: repeat(2, 1fr); } }
 .swipe-hint { display: none; }
 
@@ -258,8 +261,9 @@ section[tabindex="-1"]:focus { outline: none; }
   }
   .clients-grid::-webkit-scrollbar { display: none; }
   .clients-grid::after { content: ""; flex: 0 0 1px; } /* respiro depois do último card */
-  .client-card { flex: 0 0 78%; scroll-snap-align: start; padding: 1.15rem 1rem 1rem; }
-  .client-card h3 { font-size: 1.0625rem; }
+  .card.client-card { flex: 0 0 72%; scroll-snap-align: start; }
+  .client-logo-wrap { padding: 1.5rem 1rem 1.1rem; }
+  .client-logo { height: 72px; }
   /* No carrossel os cards aparecem direto, sem animação de entrada */
   .js .clients-grid .reveal { opacity: 1; transform: none; }
   .swipe-hint { display: block; margin: 0.5rem 0 0; text-align: center; }
